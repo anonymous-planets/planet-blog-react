@@ -21,7 +21,7 @@ export default function PrivateRoute({authentication}:PrivateRouteProps):React.R
     // 인증이 반드시 필요한 페이지
   
     // 인증을 안했을 경우 로그인 페이지로, 했을 경우 해당 페이지로
-    return (isAuthenticated === null || isAuthenticated === 'false') ? <Navigate to="/login"/> : <Outlet/>;
+    return (isAuthenticated === null || isAuthenticated === 'false') ? <Navigate to="/"/> : <Outlet/>;
 
   } else {
     // 인증이 반드시 필요 없는 페이지

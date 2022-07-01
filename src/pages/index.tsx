@@ -1,19 +1,13 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { Link } from "react-router-dom";
 
 export default function MainPage() {
-  const [isAuthenticated, setIsAuthenticated] = useState<string|null>(sessionStorage.getItem('isAuthenticated'));
-  const navigate = useNavigate();
-
   return (
     <>
-      <h1>Main Page</h1>
-      <div>로그인 여부 상관없이 누구나 접속 가능!</div>
-      {
-        isAuthenticated === null || isAuthenticated === 'false' ? <button onClick={()=>{
-          navigate("/login");
-        }}>로그인</button>: <div><button onClick={() => {navigate("/mypage")}}>myPage로 이동</button></div>
-      }
+      <Link to="/layout">Route/Layout</Link>
+      <br />
+      <Link to="/files">파일 업로드/다운로드</Link>
+      <br />
+      <Link to="/editor">Web Editor(Summernote)</Link>
     </>
   );
 }

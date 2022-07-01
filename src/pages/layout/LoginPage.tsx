@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router';
-import { Gender, Member, Role } from '../@types';
+import { Gender, Member, Role } from '../../@types';
 
 export default function LoginPage() {
   const navigate = useNavigate();
