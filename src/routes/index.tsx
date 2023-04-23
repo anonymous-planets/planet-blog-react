@@ -16,6 +16,7 @@ import AdminDefaultLayout from "layouts/AdminDefaultLayout";
 import FilePage from "pages/files/FilePage";
 import LayoutPage from "pages/layout/LayoutPage";
 import WEditor from "pages/editor/WEditor";
+import YoutubeAPIPage from "../pages/youtube";
 
 export default function Router() {
   return (
@@ -27,6 +28,7 @@ export default function Router() {
         <Route path="/layout" element={<LayoutPage />} />
         <Route path="/files" element={<FilePage />} />
         <Route path="/editor" element={<WEditor />} />
+        <Route path="/youtube" element={<YoutubeAPIPage />} />
 
         {/* 인증을 반드시 하지 않아야만 접속 가능한 페이지 정의 */}
         <Route element={<PrivateRoute authentication={false} />}>

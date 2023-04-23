@@ -8,6 +8,8 @@ export default function MainPage() {
       <Link to="/files">파일 업로드/다운로드</Link>
       <br />
       <Link to="/editor">Web Editor(Summernote)</Link>
+      <br/>
+      <Link to="/youtube">Youtube Video</Link>
     </>
   );
 }
